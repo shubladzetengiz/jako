@@ -255,6 +255,66 @@
         // Année courante dans le footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+<!--     test script -->
+
+<script>
+        // Année courante dans le footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // REMPLACEZ CETTE URL PAR VOTRE URL GOOGLE APPS SCRIPT
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/VOTRE_SCRIPT_ID/exec';
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const spinner = submitBtn.querySelector('.spinner-border');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Afficher le spinner
+            spinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            
+            // Masquer les messages précédents
+            successMsg.classList.add('d-none');
+            errorMsg.classList.add('d-none');
+            
+            // Récupérer les données du formulaire
+            const formData = new FormData(this);
+            const data = {
+                prenom: formData.get('prenom'),
+                telephone: formData.get('telephone'),
+                message: formData.get('message'),
+                date: new Date().toLocaleString('fr-FR')
+            };
+            
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                // Afficher le message de succès
+                successMsg.classList.remove('d-none');
+                this.reset(); // Vider le formulaire
+                
+            } catch (error) {
+                console.error('Erreur:', error);
+                errorMsg.classList.remove('d-none');
+            } finally {
+                // Masquer le spinner et réactiver le bouton
+                spinner.classList.add('d-none');
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
 </body>
 
 </html>

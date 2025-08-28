@@ -1,0 +1,85 @@
+ :root {
+            --accent-pink: #ff7fbf;
+            /* мягкий розовый */
+            --accent-pink-dark: #e260a4;
+            --bs-primary: var(--accent-pink);
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .text-pink {
+            color: var(--accent-pink) !important;
+        }
+
+        .bg-pink {
+            background: var(--accent-pink) !important;
+        }
+
+        .btn-pink {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: var(--accent-pink);
+            --bs-btn-border-color: var(--accent-pink);
+            --bs-btn-hover-bg: var(--accent-pink-dark);
+            --bs-btn-hover-border-color: var(--accent-pink-dark);
+            --bs-btn-focus-shadow-rgb: 255, 127, 191;
+        }
+
+        .btn-outline-pink {
+            --bs-btn-color: var(--accent-pink);
+            --bs-btn-border-color: var(--accent-pink);
+            --bs-btn-hover-bg: var(--accent-pink);
+            --bs-btn-hover-border-color: var(--accent-pink);
+            --bs-btn-hover-color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fff 0%, #ffe5f1 50%, #ffd1e7 100%);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-pink);
+            border-radius: 2px;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 220px;
+        }
+
+        .shadow-soft {
+            box-shadow: 0 10px 30px rgba(255, 127, 191, .15);
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .price-badge {
+            background: #fff;
+            color: var(--accent-pink);
+            border: 1px solid #ffd1e7;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }

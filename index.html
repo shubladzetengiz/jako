@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мастер по маникюру — Ваше имя</title>
+    <meta name="description"
+        content="Профессиональный маникюр и дизайн ногтей. Сертификаты, портфолио работ, прайс и контакты." />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --accent-pink: #ff7fbf;
+            /* мягкий розовый */
+            --accent-pink-dark: #e260a4;
+            --bs-primary: var(--accent-pink);
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .text-pink {
+            color: var(--accent-pink) !important;
+        }
+
+        .bg-pink {
+            background: var(--accent-pink) !important;
+        }
+
+        .btn-pink {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: var(--accent-pink);
+            --bs-btn-border-color: var(--accent-pink);
+            --bs-btn-hover-bg: var(--accent-pink-dark);
+            --bs-btn-hover-border-color: var(--accent-pink-dark);
+            --bs-btn-focus-shadow-rgb: 255, 127, 191;
+        }
+
+        .btn-outline-pink {
+            --bs-btn-color: var(--accent-pink);
+            --bs-btn-border-color: var(--accent-pink);
+            --bs-btn-hover-bg: var(--accent-pink);
+            --bs-btn-hover-border-color: var(--accent-pink);
+            --bs-btn-hover-color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fff 0%, #ffe5f1 50%, #ffd1e7 100%);
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.5rem;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-pink);
+            border-radius: 2px;
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 220px;
+        }
+
+        .shadow-soft {
+            box-shadow: 0 10px 30px rgba(255, 127, 191, .15);
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .price-badge {
+            background: #fff;
+            color: var(--accent-pink);
+            border: 1px solid #ffd1e7;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навбар -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink" href="#top"><i class="bi bi-balloon-heart"></i> Мастер
+                Маникюра</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#works">Мои работы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certs">Сертификаты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prices">Цены</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Хиро -->
+    <header id="top" class="hero py-5 py-lg-6">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-7">
+                    <h1 class="display-5 fw-bold mb-3">Маникюр, покрытие гель-лаком и дизайн —
+                        <span class="text-pink">качественно и с любовью</span>
+                    </h1>
+                    <p class="lead">Индивидуальный подход, стерильность и трендовые оттенки. Запишитесь онлайн или по
+                        телефону.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#prices" class="btn btn-pink btn-lg shadow-soft"><i class="bi bi-tag"></i> Посмотреть
+                            цены</a>
+                        <a href="#contacts" class="btn btn-outline-pink btn-lg"><i class="bi bi-telephone"></i>
+                            Записаться</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 text-center">
+                    <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?q=80&w=900&auto=format&fit=crop"
+                        class="img-fluid rounded-4 shadow-soft" alt="Маникюр" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОБО МНЕ -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="row g-4 align-items-center">
+                <!-- ВАЖНО: на md занимает 12 колонок; на lg делится на 2 колонки -->
+                <div class="col-12 col-md-12 col-lg-6">
+                    <img src="img/jj.jpeg"
+                        class="img-fluid rounded-4 shadow-soft" alt="Портрет мастера" />
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+                    <h3 class="fw-semibold">Ваше имя</h3>
+                    <p>Сертифицированный мастер по маникюру с <strong>5+ лет</strong> опыта. Работаю с классическим,
+                        комбинированным и аппаратным маникюром, покрытие гель-лаком, укрепление, выравнивание и дизайн.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle text-pink me-2"></i> Одноразовые расходники и
+                            стерильный инструмент</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-pink me-2"></i> Большой выбор трендовых
+                            оттенков</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-pink me-2"></i> Удобное расположение и гибкий
+                            график</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn-pink"><i class="bi bi-calendar-check"></i> Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- МОИ РАБОТЫ -->
+    <section id="works" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Мои работы</h2>
+
+            <div id="worksCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Слайд 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <img src="img/2.2.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 1">
+                            </div>
+                            <div class="col-12 col-lg-4 d-none d-lg-block">
+                                <img src="img/5.5.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 2">
+                            </div>
+
+                            <div class="col-12 col-lg-4 d-none d-lg-block">
+                                <img src="img/6.6.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <img src="img/7.7.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 4">
+                            </div>
+                            <div class="col-12 col-lg-4 d-none d-lg-block">
+                                <img src="img/1.1.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 5">
+                            </div>
+                            <div class="col-12 col-lg-4 d-none d-lg-block">
+                                <img src="img/8.8.png" class="d-block w-100 rounded-4 shadow-soft" alt="Работа 3">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Кнопки управления -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#worksCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Назад</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#worksCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Вперёд</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- СЕРТИФИКАТЫ -->
+    <section id="certs" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Сертификаты</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card border-0 rounded-4 shadow-soft">
+                        <img src="img/cert.jpeg"
+                            class="card-img-top h-100" alt="Сертификат" />
+                        <div class="card-body text-center">
+                            <h6 class="card-title mb-0">Сертификат мастера</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section id="prices" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Цены</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-8">
+                    <div class="table-responsive rounded-4 shadow-soft">
+                        <table class="table table-white align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Услуга</th>
+                                    <th class="text-center">Время</th>
+                                    <th class="text-end">Цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Manucure russe</td>
+                                    <td class="text-center">2 H 30 min</td>
+                                    <td class="text-end">30 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Chablon</td>
+                                    <td class="text-center">2 H 30 min ou plus</td>
+                                    <td class="text-end">25 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Gel sur ongles naturels</td>
+                                    <td class="text-center">2 H</td>
+                                    <td class="text-end">25 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Manucure de nettoyage des ongles</td>
+                                    <td class="text-center">15 min</td>
+                                    <td class="text-end">10 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Vernis gel pour pédicure</td>
+                                    <td class="text-center">2 H</td>
+                                    <td class="text-end">25 €</td>
+                                </tr>
+                                <tr>
+                                    <td>Pose Gel avec Capsules avec french, baby-boomer, déco</td>
+                                    <td class="text-center">2 H</td>
+                                    <td class="text-end">30 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-4">
+                    <div class="p-4 rounded-4 bg-pink text-white h-100 shadow-soft">
+                        <h5 class="fw-bold">Скидки и акции</h5>
+                        <ul class="mb-0">
+                            <li>Первый визит — <strong>-10%</strong></li>
+                            <li>Рекомендовали подругу — <strong>-15%</strong></li>
+                            <li>Комплекс услуг — <span class="badge price-badge">по специальной цене</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="row g-4">
+                <div class="col-12 col-lg-5">
+                    <div class="p-4 rounded-4 border h-100">
+                        <h5 class="fw-semibold mb-3">Запись и адрес</h5>
+                        <p class="mb-2"><i class="bi bi-telephone text-pink me-2"></i> <a href="tel:+70000000000"
+                                class="link-dark">+7 (000) 000-00-00</a></p>
+                        <p class="mb-2"><i class="bi bi-whatsapp text-pink me-2"></i> <a href="#"
+                                class="link-dark">WhatsApp</a></p>
+                        <p class="mb-2"><i class="bi bi-instagram text-pink me-2"></i> <a
+                                href="https://www.instagram.com/jacqueline_ongles_nancy/" class="link-dark"
+                                target="_blank">Instagram</a></p>
+                        <p class="mb-3"><i class="bi bi-geo-alt text-pink me-2"></i> Ваш город, улица, 1</p>
+                        <p class="small text-muted mb-0">Работаю по предварительной записи. Пожалуйста, предупредите,
+                            если опаздываете.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="p-4 rounded-4 border h-100">
+                        <h5 class="fw-semibold mb-3">Написать сообщение</h5>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Имя</label>
+                                    <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" placeholder="+7 (___) ___-__-__" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Сообщение</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Кратко опишите, какую услугу хотите" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-pink">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pink text-white py-4">
+        <div class="container text-center">
+            <strong>Мастер Маникюра</strong> © <span id="year"></span>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Текущий год в футере
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -215,26 +215,32 @@
                 <div class="col-12 col-lg-7">
                     <div class="p-4 rounded-4 border h-100">
                         <h5 class="fw-semibold mb-3">Envoyer un message</h5>
-                        <form action="" method="POST">
-                            <div class="row g-3">
-                                <div class="col-12 col-md-6">
-                                    <label class="form-label">Prénom</label>
-                                    <input type="text" class="form-control" placeholder="Votre prénom" required>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <label class="form-label">Téléphone</label>
-                                    <input type="tel" class="form-control" placeholder="+33 (_) __-__-__-__" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Message</label>
-                                    <textarea class="form-control" rows="4"
-                                        placeholder="Décrivez brièvement la prestation souhaitée" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-pink">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
+<form action="https://formsubmit.co/tengo1513@gmail.com" method="POST">
+    <!-- Скрытые настройки -->
+    <input type="hidden" name="_next" value="merci.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+
+    <div class="row g-3">
+        <div class="col-12 col-md-6">
+            <label class="form-label">Prénom</label>
+            <input type="text" class="form-control" name="name" placeholder="Votre prénom" required>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">Téléphone</label>
+            <input type="tel" class="form-control" name="tel" placeholder="+33 (_) __-__-__-__" required>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="4"
+                placeholder="Décrivez brièvement la prestation souhaitée" required></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-pink">Envoyer</button>
+        </div>
+    </div>
+</form>
+
                     </div>
                 </div>
             </div>
@@ -255,6 +261,7 @@
         // Année courante dans le footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
 </body>
 
 </html>
